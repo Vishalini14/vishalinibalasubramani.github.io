@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Project – [Project Title] | Vishalini Balasubramani</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Font (same as main site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <!-- If you extracted your main styles into a separate file, use this instead of inline styles:
+  <link rel="stylesheet" href="../styles.css">
+  -->
+
+  <style>
+    :root {
+      --bg: #050816;
+      --accent: #ff6bcb;
+      --accent-2: #4fd1c5;
+      --accent-3: #9f7aea;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --card: #0b1020;
+      --border: rgba(148, 163, 184, 0.35);
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+      --radius-xl: 26px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at 0% 0%, #1f2937 0, #050816 45%, #020617 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .noise {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+      mix-blend-mode: soft-light;
+      z-index: 1;
+    }
+
+    main {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+    }
+
+    .container {
+      width: min(1100px, 100% - 2.5rem);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 18px 0 10px;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #f9a8d4, #6366f1);
+      box-shadow: 0 0 25px rgba(96, 165, 250, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .brand-text span:first-child {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .brand-text span:last-child {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .back-link {
+      text-decoration: none;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.9);
+      transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+    }
+
+    .back-link:hover {
+      border-color: var(--accent-2);
+      background: radial-gradient(circle at 0 0, rgba(52, 211, 153, 0.2), rgba(15,23,42,0.95));
+      transform: translateY(-1px);
+      color: var(--text);
+    }
+
+    /* Page layout */
+
+    .project-wrapper {
+      padding: 18px 0 40px;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at 0 0, rgba(148,163,184,0.24), transparent 55%),
+                  rgba(15,23,42,0.96);
+      border: 1px solid var(--border);
+      padding: 24px 20px 26px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0 0, rgba(248,113,113,0.14), transparent 50%);
+      opacity: 0.7;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .project-header {
+      position: relative;
+      margin-bottom: 18px;
+    }
+
+    .project-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.9);
+      margin-bottom: 10px;
+    }
+
+    .project-title {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      margin: 0 0 6px;
+    }
+
+    .project-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-item i {
+      color: var(--accent-2);
+      font-size: 0.9rem;
+    }
+
+    /* Content layout */
+
+    .project-body {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+      gap: 24px;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .project-body {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .project-main,
+    .project-side {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-2);
+      margin-bottom: 8px;
+    }
+
+    .project-section-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 0 0 6px;
+    }
+
+    .project-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0 0 10px;
+    }
+
+    .project-text ul {
+      padding-left: 18px;
+      margin: 4px 0 8px;
+    }
+
+    .project-text li {
+      margin-bottom: 3px;
+    }
+
+    .stack-card, .links-card {
+      border-radius: 18px;
+      background: rgba(15,23,42,0.98);
+      border: 1px solid rgba(148,163,184,0.45);
+      padding: 14px 12px 14px;
+      margin-bottom: 14px;
+    }
+
+    .stack-title, .links-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .stack-tag {
+      font-size: 0.75rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.96);
+      border: 1px solid rgba(148,163,184,0.55);
+      color: var(--muted);
+    }
+
+    .links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.82rem;
+    }
+
+    .links-list li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .links-list a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    .links-list a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 16px 0 22px;
+      border-top: 1px solid rgba(31,41,55,0.9);
+      background: radial-gradient(circle at 50% -40%, rgba(148,163,184,0.28), transparent 70%),
+                  rgba(3,7,18,0.98);
+      position: relative;
+      z-index: 2;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    @media (max-width: 720px) {
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="noise"></div>
+
+<main>
+  <header>
+    <div class="container">
+      <div class="top-bar">
+        <div class="brand">
+          <div class="brand-avatar">VB</div>
+          <div class="brand-text">
+            <span>Vishalini Balasubramani</span>
+            <span>Data Science · Analytics · Engineering</span>
+          </div>
+        </div>
+
+        <!-- Back to main portfolio projects section -->
+        <a href="../index.html#projects" class="back-link">
+          <i class="bi bi-arrow-left"></i>
+          Back to projects
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="project-wrapper">
+    <div class="container">
+      <article class="project-card">
+        <!-- HEADER -->
+        <div class="project-header">
+          <div class="project-tag">
+            <!-- EDIT THIS: e.g. "Machine Learning", "GenAI", "GIS" -->
+            <i class="bi bi-cpu"></i> Machine Learning
+          </div>
+
+          <h1 class="project-title">
+            <!-- EDIT THIS: Project title -->
+            Customer Churn Prediction for SmartBank
+          </h1>
+
+          <p class="project-subtitle">
+            <!-- EDIT THIS: One-liner summary -->
+            Built a churn prediction model for a Lloyds subsidiary (SmartBank) using EDA, feature engineering, 
+            and supervised learning to identify at-risk customers and support targeted retention strategies.
+          </p>
+
+          <div class="meta-row">
+            <div class="meta-item">
+              <i class="bi bi-calendar-event"></i>
+              <!-- EDIT THIS: Timeline -->
+              2025 · Academic + Portfolio Project
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-briefcase"></i>
+              <!-- EDIT THIS: Context -->
+              Domain: Banking · Customer Analytics
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-graph-up-arrow"></i>
+              <!-- EDIT THIS: Outcome highlight -->
+              Outcome: Improved identification of high-risk churn customers
+            </div>
+          </div>
+        </div>
+
+        <!-- BODY -->
+        <div class="project-body">
+          <!-- LEFT: MAIN CONTENT -->
+          <div class="project-main">
+            <!-- Overview -->
+            <div style="margin-bottom: 16px;">
+              <div class="section-label">Overview</div>
+              <h2 class="project-section-title">Project summary</h2>
+              <div class="project-text">
+                <!-- EDIT THIS -->
+                <p>
+                  This project focuses on predicting customer churn for SmartBank, a fictional Lloyds subsidiary,
+                  using historical customer behaviour, demographics, and product usage data. The goal was to give
+                  the business an early warning system to identify customers likely to leave, enabling proactive
+                  retention actions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Problem -->
+            <div style="margin-bottom: 16px;">
+              <div class="section-label">Problem</div>
+              <h2 class="project-section-title">Business problem & objectives</h2>
+              <div class="project-text">
+                <!-- EDIT THIS -->
+                <p>
+                  Banks lose significant revenue when high-value customers close their accounts. SmartBank wanted to:
+                </p>
+                <ul>
+                  <li>Identify customers most likely to churn in the near future.</li>
+                  <li>Understand which factors drive churn behaviour (e.g., complaints, low activity, fees).</li>
+                  <li>Prioritise retention campaigns for high-risk and high-value segments.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Approach -->
+            <div style="margin-bottom: 16px;">
+              <div class="section-label">Approach</div>
+              <h2 class="project-section-title">Data, modelling & workflow</h2>
+              <div class="project-text">
+                <!-- EDIT THIS -->
+                <ul>
+                  <li>Performed exploratory data analysis (EDA) to understand distributions, correlations, and data quality.</li>
+                  <li>Engineered features from transaction history, tenure, complaints, and product holdings.</li>
+                  <li>Handled class imbalance using techniques like class weighting / resampling.</li>
+                  <li>Trained baseline models (Logistic Regression) and compared with tree-based methods.</li>
+                  <li>Evaluated models using AUC, precision/recall, and business-friendly metrics.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Results -->
+            <div style="margin-bottom: 16px;">
+              <div class="section-label">Results</div>
+              <h2 class="project-section-title">Key insights & outcomes</h2>
+              <div class="project-text">
+                <!-- EDIT THIS -->
+                <ul>
+                  <li>Model successfully differentiated churners from non-churners with strong AUC and recall on high-risk customers.</li>
+                  <li>Top drivers of churn included reduced account activity, increased complaints, and low product engagement.</li>
+                  <li>Suggested a prioritisation strategy: focus retention offers on high-risk, high-LTV customers first.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Reflection -->
+            <div>
+              <div class="section-label">Reflection</div>
+              <h2 class="project-section-title">What I learned</h2>
+              <div class="project-text">
+                <!-- EDIT THIS -->
+                <p>
+                  This project strengthened my end-to-end workflow skills: from cleaning and exploring real-world style 
+                  banking data, to feature engineering, model evaluation, and framing results in a way that is useful 
+                  for business stakeholders rather than just technically interesting.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: SIDE PANEL -->
+          <aside class="project-side">
+            <!-- Tech stack -->
+            <div class="stack-card">
+              <div class="stack-title">Tech stack & methods</div>
+              <div class="stack-tags">
+                <!-- EDIT THESE TAGS PER PROJECT -->
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">Pandas</span>
+                <span class="stack-tag">NumPy</span>
+                <span class="stack-tag">Scikit-learn</span>
+                <span class="stack-tag">Seaborn</span>
+                <span class="stack-tag">Matplotlib</span>
+                <span class="stack-tag">Logistic Regression</span>
+                <span class="stack-tag">EDA</span>
+                <span class="stack-tag">Classification</span>
+              </div>
+            </div>
+
+            <!-- Links -->
+            <div class="links-card">
+              <div class="links-title">Links & resources</div>
+              <ul class="links-list">
+                <!-- EDIT OR REMOVE LINKS AS NEEDED -->
+                <li>
+                  <i class="bi bi-github"></i>
+                  <a href="#" target="_blank" rel="noopener">
+                    View project on GitHub
+                  </a>
+                </li>
+                <li>
+                  <i class="bi bi-bar-chart-line"></i>
+                  <a href="#" target="_blank" rel="noopener">
+                    View notebook / report
+                  </a>
+                </li>
+                <li>
+                  <i class="bi bi-link-45deg"></i>
+                  <a href="../index.html#projects">
+                    Back to portfolio
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Optional small note -->
+            <div class="project-text" style="font-size:0.78rem; margin-top:8px;">
+              <!-- Optional short note to hiring managers -->
+              Designed for review by hiring managers and recruiters – happy to walk through this project in an interview.
+            </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Vishalini Balasubramani</span>
+      <span>Project detail · Portfolio</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Dynamic year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
