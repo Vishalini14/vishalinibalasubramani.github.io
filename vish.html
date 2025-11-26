@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Vishalini Balasubamanian – Data Scientist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Vishalini Balasubamanian, Data Scientist based in Cardiff, UK." />
+  <meta name="description" content="Portfolio of Vishalini Balasubamanian, Data Scientist based in UK." />
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -247,6 +247,7 @@
       .nav-toggle {
         display: inline-flex;
       }
+
     }
 
     /* ===== HERO ===== */
@@ -576,6 +577,7 @@
       background: radial-gradient(circle at 0 0, rgba(248,113,113,0.12), transparent 50%);
       opacity: 0;
       transition: opacity 0.35s ease;
+      pointer-events: none;
     }
 
     .card:hover::before {
@@ -680,8 +682,45 @@
       border: 1px solid rgba(148,163,184,0.55);
       color: var(--muted);
     }
+    
+    .badge-row a .badge{
+      text-decoration: none;
+      cursor: pointer;
+    }
 
+    .cert-block .badge-row a:hover .badge {
+      transform: translateY(-3px) scale(1.06);
+      border-color: var(--accent-2);
+      box-shadow: 0 8px 22px rgba(79, 209, 197, 0.4);
+      background: rgba(15,23,42,0.85);
+      color: var(--text);
+    }
+
+    .cert-block .badge-row a {
+      text-decoration: none;
+      color: inherit;    
+    }
+
+   
+    .cert-block .badge-row a:focus,
+    .cert-block .badge-row a:active {
+      outline: none;
+      color: inherit;
+    }
+
+    .cert-block .badge-row a .badge {
+      color: inherit;
+    }
     /* ===== PROJECTS ===== */
+
+    .project-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project-link article {
+      cursor: pointer;
+    }
 
     .project-grid {
       display: grid;
@@ -954,7 +993,7 @@
         <div class="brand-avatar">VB</div>
         <div class="brand-text">
           <span>Vishalini Balasubamanian</span>
-          <span>Data Scientist · Cardiff</span>
+          <span>Data Scientist · United Kingdom</span>
         </div>
       </div>
 
@@ -994,19 +1033,19 @@
           </h1>
           <p class="hero-subtitle">
             MSc Data Science (Distinction) from Cardiff Metropolitan University with hands-on
-            experience in machine learning, data visualization and predictive analytics – plus
-            2 years as a Senior Analyst at Cognizant in Bangalore.
+            experience in machine learning, data visualization and predictive analytics, plus
+            2 years SAP experience as a Programmer Analyst at Cognizant in India.
           </p>
 
           <div class="hero-meta">
             <div class="hero-meta-item">
-              <i class="bi bi-geo-alt-fill"></i> Cardiff, United Kingdom
+              <i class="bi bi-geo-alt-fill"></i> United Kingdom
             </div>
             <div class="hero-meta-item">
-              <i class="bi bi-mortarboard-fill"></i> MSc Data Science · B.Tech CSE
+              <i class="bi bi-mortarboard-fill"></i> MSc Data Science(UK)· B.Tech Comp.Science Engineering(India)
             </div>
             <div class="hero-meta-item">
-              <i class="bi bi-building-check"></i> Ex-Cognizant · Senior Analyst
+              <i class="bi bi-building-check"></i> Ex-Cognizant · Programmer Analyst
             </div>
           </div>
 
@@ -1031,8 +1070,8 @@
               <div class="hero-avatar">
                 <div class="avatar-circle">VB</div>
                 <div class="avatar-meta">
-                  <span>Vishalini B.</span>
-                  <span>Data Scientist · Analyst</span>
+                  <span>Vishalini</span>
+                  <span>Data Scientist/Analyst · ML Engineer · SAP Expert</span>
                 </div>
               </div>
               <div class="status-pill">
@@ -1042,21 +1081,22 @@
             </div>
 
             <div class="hero-card-body">
-              <strong>MSc Data Science (Distinction)</strong> – Cardiff Metropolitan University, UK.  
-              Previously <strong>Senior Analyst at Cognizant</strong> (2 years, Bangalore).
+              <strong>MSc Data Science (Distinction)</strong> - Cardiff Metropolitan University, UK.  
+              Previously <strong>Programmer Analyst at Cognizant</strong> (2 years, India).
               Specialised in <strong>machine learning, predictive modelling, and data storytelling</strong>.
             </div>
 
             <div class="chip-row">
               <span class="chip">Python · SQL · Tableau</span>
-              <span class="chip">Machine Learning</span>
+              <span class="chip">Machine Learning · MLops </span>
               <span class="chip">Power BI · Excel</span>
-              <span class="chip">RFM & Clustering</span>
+              <span class="chip">SAP ABAP · SAP CRM </span>
+              <span class="chip">Data Engineering </span>
             </div>
 
             <div class="hero-card-footer">
-              <span>Last project: <strong>Customer Segmentation</strong></span>
-              <span><i class="bi bi-lightning-charge-fill"></i> Real-world business impact</span>
+              <span>Last project: <strong>Customer Churn Prediction - Lloyds </strong></span>
+              <span><i class="bi bi-lightning-charge-fill"></i> Real-world business and environmental impact</span>
             </div>
           </div>
         </div>
@@ -1072,8 +1112,8 @@
         <h2 class="section-title">Who is Vishalini?</h2>
         <p class="section-subtitle">
           A data scientist with a strong foundation in computer science, business-focused analytics,
-          and end-to-end problem solving – from understanding messy requirements to delivering clean,
-          production-ready insights.
+          and end-to-end problem solving; from understanding messy requirements to delivering clean,
+          production-ready insights followed by predictive modeling and model deployment.
         </p>
       </div>
 
@@ -1093,7 +1133,7 @@
             </div>
             <div class="edu-focus">
               Focus: Machine Learning, Data Visualization, Predictive Modelling, Big Data.  
-              Built multiple data-driven projects using Python, SQL, and Tableau.
+              Built multiple data-driven projects using Python, SQL, Tableau, and GIS.
             </div>
           </div>
 
@@ -1104,7 +1144,7 @@
               B.Tech. Computer Science and Engineering, Sri Manakula Vinayagar Engineering College, India
             </div>
             <div class="edu-meta">
-              First Class (8.29 CGPA) | Graduated: 2021
+              First Class with Distinction(9.1 CGPA) | Graduated: 2021
             </div>
             <div class="edu-focus">
               Core Subjects: Data Structures, Database Management Systems, Algorithms.  
@@ -1114,7 +1154,7 @@
 
           <div class="timeline-badge">
             <span class="timeline-dot"></span>
-            <span>From Computer Science fundamentals → to advanced Data Science applications.</span>
+            <span>From Computer Science fundamentals → to advanced web and data science applications.</span>
           </div>
         </div>
 
@@ -1124,18 +1164,21 @@
             <span class="pill"><i class="bi bi-briefcase"></i> Work Experience</span>
           </div>
 
-          <h3 class="card-title">Senior Analyst · Cognizant Technology Solutions</h3>
+          <h4 class="card-title">Programmer Analyst(SAP ABAP/CRM Consultant) · Cognizant Technology Solutions</h4>
           <p style="font-size:0.82rem; color:var(--muted); margin-bottom:6px;">
-            Bangalore, India · 2 years
+            India · 2+ years
           </p>
           <p>
             Worked on data-intensive projects, collaborating with cross-functional teams to
             design dashboards, automate reports, and support data-driven decision-making.
           </p>
           <ul style="padding-left:18px; margin: 8px 0 4px; font-size:0.82rem; color:var(--muted);">
-            <li>Cleaned and transformed large datasets using Python and SQL.</li>
-            <li>Built performance and KPI dashboards using Tableau / Power BI.</li>
+            <li>Cleaned and transformed large datasets using Excel for data reconciliation.</li>
             <li>Collaborated with stakeholders to translate business questions into analytical solutions.</li>
+            <li>Handled monthly sales management and billing processes within a custom SAP CRM, with SAP IPM expertise to ensure 100% timely author share settlements and contributing to a 15% improvement in processing efficiency..</li>
+            <li>Optimized daily system health monitoring protocols for SAP environments, using RICEP concepts to detect and proactively address 40% of potential issues, ensuring seamless operation.</li>
+            <li>Experienced in enhancements, debugging, and service automation.</li>
+            <li>Collaborated closely with 3 cross-functional teams, SAP APO,SAP Fiori and SAP CRM to ensure a seamless application experience in sales planning and to resolve 25% more client tickets efficiently.</li>
           </ul>
 
           <div class="timeline-badge">
@@ -1154,7 +1197,7 @@
         <div class="section-tag">Skills & Expertise</div>
         <h2 class="section-title">What I work with</h2>
         <p class="section-subtitle">
-          From hands-on coding in Python and SQL to building dashboards and segmenting customers – here’s the tech stack and domains I’m comfortable shipping in.
+          From hands-on coding in Python and SQL to building dashboards - here’s the tech stack and domains I've worked with and am mastering.
         </p>
       </div>
 
@@ -1163,12 +1206,12 @@
           <h4>Programming & Scripting</h4>
           <div class="badge-row">
             <span class="badge">Python</span>
-            <span class="badge">Pandas</span>
-            <span class="badge">NumPy</span>
-            <span class="badge">Matplotlib</span>
-            <span class="badge">Seaborn</span>
-            <span class="badge">Plotly</span>
+            <span class="badge">Pandas/Numpy</span>
+            <span class="badge">Matplotlib/Seaborn</span>
+            <span class="badge">Java</span>
             <span class="badge">SQL</span>
+            <span class="badge">SAP ABAP</span>
+            <span class="badge">PyTest</span>
           </div>
         </div>
 
@@ -1179,15 +1222,16 @@
             <span class="badge">Power BI</span>
             <span class="badge">Excel</span>
             <span class="badge">Interactive Plotly Dashboards</span>
+            <span class="badge">Geographical Interactive Systems (GIS)</span>
           </div>
         </div>
 
         <div class="skill-block card reveal delay-4">
           <h4>Machine Learning & Analytics</h4>
           <div class="badge-row">
-            <span class="badge">K-means Clustering</span>
-            <span class="badge">Regression Models</span>
-            <span class="badge">RFM Analysis</span>
+            <span class="badge">MLops</span>
+            <span class="badge">Deep Learning</span>
+            <span class="badge">ML Algorithms</span>
             <span class="badge">Predictive Analytics</span>
           </div>
         </div>
@@ -1195,15 +1239,42 @@
         <div class="skill-block card reveal delay-5">
           <h4>Data Handling & Platforms</h4>
           <div class="badge-row">
-            <span class="badge">CSV & Excel</span>
+            <span class="badge">CSV & Excel/Google Sheets</span>
             <span class="badge">APIs</span>
-            <span class="badge">Google Sheets</span>
-            <span class="badge">SQLite</span>
+            <span class="badge">GA4</span>
             <span class="badge">Jupyter Notebook</span>
-            <span class="badge">Google Colab</span>
+            <span class="badge">TensorFlow</span>
+            <span class="badge">ServiceNow Ticketing</span>
             <span class="badge">Git & GitHub</span>
           </div>
         </div>
+
+        <div class="skill-block card reveal delay-6 cert-block">
+          <h4>Certifications and Internships</h4>
+          <div class="badge-row">
+            <a href="https://1drv.ms/f/c/ceef93521a7756b2/IgBpRqnvKRtFTodUvt2mWJanAfkVTqWknxVp-mA306adNpw?e=YvjSZn" 
+              target="_blank" rel="noopener noreferrer">
+              <span class="badge">Cybersecurity Essentials – CISCO</span>
+            </a>
+
+            <a href="https://1drv.ms/b/c/ceef93521a7756b2/IQC3_Rch9cF3QLqNzgqpojx5AbQ9n2_3svnToxhGrXhuqOs?e=WuyVcU" 
+              target="_blank" rel="noopener noreferrer">
+              <span class="badge">BCG GenAI Job Simulation</span>
+            </a>
+
+            <a href="#" 
+              target="_blank" rel="noopener noreferrer">
+              <span class="badge">Lloyds Data Science Job Simulation</span>
+            </a>
+
+            <a href="https://1drv.ms/b/c/ceef93521a7756b2/IQA60y_k5BR8RbvYIkPI2MnRAUQgpS6yTFbWzJaQmlvurU8?e=TvMYbd" 
+              target="_blank" rel="noopener noreferrer">
+              <span class="badge">Immersive Labs Cyber Simulation</span>
+            </a>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1215,17 +1286,17 @@
         <div class="section-tag">Projects</div>
         <h2 class="section-title">A few things I’ve built</h2>
         <p class="section-subtitle">
-          Sample project descriptions – you can replace these with real academic / personal / work projects.
-          The focus is on storytelling: problem → data → approach → impact.
+          Some of my key data science projects demonstrating my skills in machine learning and data science applications
         </p>
       </div>
 
       <div class="project-grid">
+        <a href="projects/churn.html" class="project-link">
         <article class="project-card reveal delay-2">
           <div class="project-tag">Machine Learning</div>
           <div class="project-title">Customer Churn Prediction</div>
           <div class="project-meta">
-            Built a classification model to predict telecom customer churn using Python, Pandas and scikit-learn.
+            Working on a customer churn prediction project using EDA and predictive analytics to enhance retention strategies for SmartBank, a Lloyds subsidiary.
           </div>
           <div class="project-stack">
             <span>Python</span>
@@ -1234,9 +1305,11 @@
             <span>Seaborn</span>
           </div>
         </article>
+        </a>
 
+        <a href="projects/sentimentanalysis.html" class="project-link">
         <article class="project-card reveal delay-3">
-          <div class="project-tag">Customer Analytics</div>
+          <div class="project-tag">Sentiment Analysis and Youtube Engagement Metrics</div>
           <div class="project-title">RFM-Based Customer Segmentation</div>
           <div class="project-meta">
             Segmented customers based on Recency, Frequency and Monetary value to identify VIP, loyal and at-risk segments.
@@ -1248,9 +1321,89 @@
             <span>Tableau</span>
           </div>
         </article>
+        </a>
 
+        <a href="projects/genai.html" class="project-link">
         <article class="project-card reveal delay-4">
-          <div class="project-tag">BI & Dashboards</div>
+          <div class="project-tag">GenAI</div>
+          <div class="project-title">Financial ChatBot with GenAI</div>
+          <div class="project-meta">
+            Designed an AI-powered financial chatbot for BCG's GenAI Consulting team.
+          </div>
+          <div class="project-stack">
+            <span>Power BI</span>
+            <span>DAX</span>
+            <span>Data Modelling</span>
+          </div>
+        </article>
+        </a>
+
+        <a href="projects/pcos.html" class="project-link">
+        <article class="project-card reveal delay-5">
+          <div class="project-tag">Data Science</div>
+          <div class="project-title">PCOS Prediction</div>
+          <div class="project-meta">
+            Designed an interactive dashboard to track revenue, growth, and regional performance for a mock retail dataset.
+          </div>
+          <div class="project-stack">
+            <span>Power BI</span>
+            <span>DAX</span>
+            <span>Data Modelling</span>
+          </div>
+        </article>
+        </a>
+
+
+        <a href="projects/fooddemand.html" class="project-link">
+        <article class="project-card reveal delay-6">
+          <div class="project-tag">Data Science</div>
+          <div class="project-title">Food Demand Prediction for Zero Hunger Initiative</div>
+          <div class="project-meta">
+            Designed an interactive dashboard to track revenue, growth, and regional performance for a mock retail dataset.
+          </div>
+          <div class="project-stack">
+            <span>Power BI</span>
+            <span>DAX</span>
+            <span>Data Modelling</span>
+          </div>
+        </article>
+        </a>
+
+
+        <a href="projects/gis.html" class="project-link">
+        <article class="project-card reveal delay-7">
+          <div class="project-tag">GIS</div>
+          <div class="project-title">Geospatial Analysis</div>
+          <div class="project-meta">
+            Designed an interactive dashboard to track revenue, growth, and regional performance for a mock retail dataset.
+          </div>
+          <div class="project-stack">
+            <span>Power BI</span>
+            <span>DAX</span>
+            <span>Data Modelling</span>
+          </div>
+        </article>
+        </a>
+
+
+        <a href="projects/alliance.html" class="project-link">
+        <article class="project-card reveal delay-8">
+          <div class="project-tag">Project Management</div>
+          <div class="project-title">The Alliance Project - Technology project management</div>
+          <div class="project-meta">
+            Designed an interactive dashboard to track revenue, growth, and regional performance for a mock retail dataset.
+          </div>
+          <div class="project-stack">
+            <span>Power BI</span>
+            <span>DAX</span>
+            <span>Data Modelling</span>
+          </div>
+        </article>
+        </a>
+
+        <a href="projects/cybersecurity.html" class="project-link">
+        <article class="project-card reveal delay-9">
+          <div class="project-tag">Cybersecurity</div>
           <div class="project-title">Sales Performance Dashboard</div>
           <div class="project-meta">
             Designed an interactive dashboard to track revenue, growth, and regional performance for a mock retail dataset.
@@ -1261,6 +1414,7 @@
             <span>Data Modelling</span>
           </div>
         </article>
+        </a>
       </div>
     </div>
   </section>
@@ -1272,8 +1426,9 @@
         <div class="section-tag">Contact</div>
         <h2 class="section-title">Let’s build something</h2>
         <p class="section-subtitle">
-          Whether it’s an internship, full-time role, or a data project collaboration – I’m happy to chat.
-          The fastest way to reach me is via email.
+          With a blend of industry experience, technical expertise, and hands-on project work, I’m ready to
+          contribute wherever analytical thinking, problem-solving, and reliable execution are needed. If you’re
+          looking for someone versatile and driven, I’d love to connect.
         </p>
       </div>
 
@@ -1293,7 +1448,7 @@
               <i class="bi bi-geo-alt-fill"></i>
               <div>
                 <strong>Location</strong><br/>
-                102, Paget Street, Cardiff, CF11 7JZ, United Kingdom
+                United Kingdom
               </div>
             </li>
             <li>
@@ -1304,11 +1459,6 @@
               </div>
             </li>
           </ul>
-
-          <p class="contact-note">
-            Prefer a quick note instead of a full email? Use the form – it’s just a basic HTML form right now,
-            you can later wire it to Formspree, Netlify Forms or a custom backend.
-          </p>
         </div>
 
         <div class="contact-card reveal delay-3">
