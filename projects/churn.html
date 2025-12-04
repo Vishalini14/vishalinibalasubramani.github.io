@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Project – [Project Title] | Vishalini Balasubramani</title>
+  <title>Project – Customer Churn Prediction (SmartBank) | Vishalini Balasubramani</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Google Font (same as main site) -->
@@ -11,10 +11,7 @@
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
 
-  <!-- If you extracted your main styles into a separate file, use this instead of inline styles:
-  <link rel="stylesheet" href="../styles.css">
-  -->
-
+  <!-- Styles  -->
   <style>
     :root {
       --bg: #050816;
@@ -364,120 +361,195 @@
         <!-- HEADER -->
         <div class="project-header">
           <div class="project-tag">
-            <!-- EDIT THIS: e.g. "Machine Learning", "GenAI", "GIS" -->
-            <i class="bi bi-cpu"></i> Machine Learning
+            <i class="bi bi-cpu"></i> Data Science
+            <i class="bi bi-graph-up-arrow"></i> Customer Analytics
+            <i class="bi bi-bar-chart"></i> EDA
           </div>
 
           <h1 class="project-title">
-            <!-- EDIT THIS: Project title -->
             Customer Churn Prediction for SmartBank
           </h1>
 
           <p class="project-subtitle">
-            <!-- EDIT THIS: One-liner summary -->
-            Built a churn prediction model for a Lloyds subsidiary (SmartBank) using EDA, feature engineering, 
-            and supervised learning to identify at-risk customers and support targeted retention strategies.
+            Working on a churn prediction model for SmartBank, a fictional Lloyds Banking Group subsidiary,
+            as part of the Data Science virtual experience on Forage. The project combines
+            EDA, feature engineering and machine learning to flag at-risk customers for targeted
+            retention strategies. 
           </p>
 
           <div class="meta-row">
             <div class="meta-item">
               <i class="bi bi-calendar-event"></i>
-              <!-- EDIT THIS: Timeline -->
-              2025 · Academic + Portfolio Project
+              2025 · Lloyds - Data Science Job Simulation (Forage)
             </div>
             <div class="meta-item">
               <i class="bi bi-briefcase"></i>
-              <!-- EDIT THIS: Context -->
-              Domain: Banking · Customer Analytics
+              Domain: Banking · Customer Retention
             </div>
             <div class="meta-item">
               <i class="bi bi-graph-up-arrow"></i>
-              <!-- EDIT THIS: Outcome highlight -->
-              Outcome: Improved identification of high-risk churn customers
+              Focus: Early identification of high-risk churn customers
             </div>
           </div>
         </div>
 
-        <!-- BODY -->
+
+        <!-- PROGRESS NOTE -->
+        <div class="project-text" style="
+          font-size:0.82rem;
+          line-height:1.6;
+          margin-bottom:14px;
+          padding:10px 12px;
+          border-left:3px solid var(--accent-2);
+          background:rgba(79,209,197,0.05);
+          border-radius:8px;
+        ">
+          🚧 <strong>Project in progress:</strong> This case study is actively being developed as part of the
+          Lloyds Banking Group Forage job simulation.  
+          Data preparation, modelling, and evaluation sections will be added once analysis is complete.
+        </div>
+
+        
+        <!-- 
         <div class="project-body">
-          <!-- LEFT: MAIN CONTENT -->
+          
           <div class="project-main">
-            <!-- Overview -->
+            
             <div style="margin-bottom: 16px;">
               <div class="section-label">Overview</div>
               <h2 class="project-section-title">Project summary</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <p>
-                  This project focuses on predicting customer churn for SmartBank, a fictional Lloyds subsidiary,
-                  using historical customer behaviour, demographics, and product usage data. The goal was to give
-                  the business an early warning system to identify customers likely to leave, enabling proactive
-                  retention actions.
+                  SmartBank (a simulated Lloyds Banking Group brand) wants to reduce customer attrition
+                  by predicting which customers are likely to leave in the near future. Using historical
+                  customer data covering demographics, account products, transaction behaviour and
+                  customer service interactions, I built a supervised classification model to estimate
+                  churn risk at the customer level.
+                </p>
+                <p>
+                  The deliverables include cleaned and documented datasets, exploratory analysis,
+                  model prototypes and business-oriented recommendations on how SmartBank can use
+                  the model in retention campaigns.
                 </p>
               </div>
             </div>
 
-            <!-- Problem -->
-            <div style="margin-bottom: 16px;">
+            
+            <div style="margin-bottom: 16px%;">
               <div class="section-label">Problem</div>
               <h2 class="project-section-title">Business problem & objectives</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <p>
-                  Banks lose significant revenue when high-value customers close their accounts. SmartBank wanted to:
+                  Retaining existing customers is significantly cheaper than acquiring new ones, and
+                  churn from high-value customers directly impacts revenue and cross-sell potential.
+                  The main objectives were to:
                 </p>
                 <ul>
-                  <li>Identify customers most likely to churn in the near future.</li>
-                  <li>Understand which factors drive churn behaviour (e.g., complaints, low activity, fees).</li>
-                  <li>Prioritise retention campaigns for high-risk and high-value segments.</li>
+                  <li>Identify customers most likely to churn in the next period.</li>
+                  <li>Understand which behaviours and attributes drive churn (e.g. complaints, low activity, product usage).</li>
+                  <li>Provide a prioritised view of high-risk, high-value customers for targeted retention offers.</li>
+                  <li>Demonstrate an end-to-end data science workflow aligned with Lloyds’ data team practices. :contentReference[oaicite:1]{index=1}</li>
                 </ul>
               </div>
             </div>
 
-            <!-- Approach -->
+            
             <div style="margin-bottom: 16px;">
               <div class="section-label">Approach</div>
               <h2 class="project-section-title">Data, modelling & workflow</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <ul>
-                  <li>Performed exploratory data analysis (EDA) to understand distributions, correlations, and data quality.</li>
-                  <li>Engineered features from transaction history, tenure, complaints, and product holdings.</li>
-                  <li>Handled class imbalance using techniques like class weighting / resampling.</li>
-                  <li>Trained baseline models (Logistic Regression) and compared with tree-based methods.</li>
-                  <li>Evaluated models using AUC, precision/recall, and business-friendly metrics.</li>
+                  <li>
+                    <strong>Data understanding & EDA:</strong> Explored customer distributions by tenure,
+                    products, spend, complaints and churn flag; visualised class imbalance and key
+                    numeric relationships (e.g. tenure vs churn rate).
+                  </li>
+                  <li>
+                    <strong>Cleaning & preprocessing:</strong> Handled missing values, normalised
+                    numeric features where appropriate and encoded categorical variables (e.g. product
+                    categories, geography) using one-hot encoding.
+                  </li>
+                  <li>
+                    <strong>Feature engineering:</strong> Created behaviour-based features such as:
+                    total products held, complaint frequency, average monthly spend, recency of last
+                    transaction and engagement indicators (e.g. digital vs branch-heavy usage).
+                  </li>
+                  <li>
+                    <strong>Class imbalance handling:</strong> Addressed the lower proportion of churners
+                    using techniques such as class weighting and resampling to avoid models simply
+                    predicting the majority class.
+                  </li>
+                  <li>
+                    <strong>Modeling:</strong> Started with a Logistic Regression baseline, then experimented
+                    with tree-based models (e.g. Random Forest, Gradient Boosting) to capture
+                    nonlinear interactions and feature importance.
+                  </li>
+                  <li>
+                    <strong>Evaluation:</strong> Assessed models using metrics aligned with churn use cases:
+                    precision, recall, F1 score and ROC-AUC, with particular emphasis on recall for
+                    churners to minimise false negatives.
+                  </li>
+                  <li>
+                    <strong>Explainability:</strong> Used feature importance plots and partial interpretations
+                    of key drivers (e.g. high complaints + declining spend) to inform business actions.
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <!-- Results -->
+            
             <div style="margin-bottom: 16px;">
               <div class="section-label">Results</div>
               <h2 class="project-section-title">Key insights & outcomes</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <ul>
-                  <li>Model successfully differentiated churners from non-churners with strong AUC and recall on high-risk customers.</li>
-                  <li>Top drivers of churn included reduced account activity, increased complaints, and low product engagement.</li>
-                  <li>Suggested a prioritisation strategy: focus retention offers on high-risk, high-LTV customers first.</li>
+                  <li>
+                    <strong>Churn patterns:</strong> Customers with shorter tenure, fewer products,
+                    recent complaints and lower recent spending showed noticeably higher churn rates.
+                  </li>
+                  <li>
+                    <strong>Model performance:</strong> The best-performing tree-based model clearly
+                    separated churners from non-churners and improved recall on high-risk customers
+                    compared to the logistic baseline, making it more suitable for proactive retention.
+                  </li>
+                  <li>
+                    <strong>Top churn drivers:</strong> Important features included product count,
+                    complaint history, recent transaction activity, account balance trends and whether
+                    customers were using key digital services.
+                  </li>
+                  <li>
+                    <strong>Retention strategy:</strong> Recommended a tiered approach where marketing
+                    focuses first on high-churn-probability and high-value customers, tailoring
+                    interventions such as fee waivers, personalised offers or proactive outreach.
+                  </li>
+                  <li>
+                    <strong>Business impact:</strong> Even modest improvements in retaining at-risk,
+                    high-value customers translate into significant gains in lifetime value and reduced
+                    acquisition costs.
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <!-- Reflection -->
+            
             <div>
               <div class="section-label">Reflection</div>
               <h2 class="project-section-title">What I learned</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <p>
-                  This project strengthened my end-to-end workflow skills: from cleaning and exploring real-world style 
-                  banking data, to feature engineering, model evaluation, and framing results in a way that is useful 
-                  for business stakeholders rather than just technically interesting.
+                  This project reinforced how important it is to connect model metrics with business
+                  impact: a churn model with slightly lower overall accuracy but higher recall on
+                  churners can be much more valuable for retention.
+                </p>
+                <p>
+                  I also deepened my experience with imbalanced classification, banking-style customer
+                  data, and explaining technical results (like feature importance and ROC curves) in a
+                  way that stakeholders can act on - which is exactly the kind of work Lloyds’ data
+                  teams expect from graduates. 
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- RIGHT: SIDE PANEL -->
           <aside class="project-side">
@@ -485,7 +557,6 @@
             <div class="stack-card">
               <div class="stack-title">Tech stack & methods</div>
               <div class="stack-tags">
-                <!-- EDIT THESE TAGS PER PROJECT -->
                 <span class="stack-tag">Python</span>
                 <span class="stack-tag">Pandas</span>
                 <span class="stack-tag">NumPy</span>
@@ -493,6 +564,9 @@
                 <span class="stack-tag">Seaborn</span>
                 <span class="stack-tag">Matplotlib</span>
                 <span class="stack-tag">Logistic Regression</span>
+                <span class="stack-tag">Random Forest</span>
+                <span class="stack-tag">Gradient Boosting</span>
+                <span class="stack-tag">Class Imbalance</span>
                 <span class="stack-tag">EDA</span>
                 <span class="stack-tag">Classification</span>
               </div>
@@ -500,35 +574,22 @@
 
             <!-- Links -->
             <div class="links-card">
-              <div class="links-title">Links & resources</div>
+              <div class="links-title">Project links</div>
               <ul class="links-list">
-                <!-- EDIT OR REMOVE LINKS AS NEEDED -->
                 <li>
                   <i class="bi bi-github"></i>
-                  <a href="#" target="_blank" rel="noopener">
-                    View project on GitHub
-                  </a>
-                </li>
-                <li>
-                  <i class="bi bi-bar-chart-line"></i>
-                  <a href="#" target="_blank" rel="noopener">
-                    View notebook / report
-                  </a>
-                </li>
-                <li>
-                  <i class="bi bi-link-45deg"></i>
-                  <a href="../index.html#projects">
-                    Back to portfolio
+                  <a href="https://github.com/Vishalini14/customer-churn-prediction-smartbank" target="_blank">
+                    GitHub repository
                   </a>
                 </li>
               </ul>
             </div>
 
-            <!-- Optional small note -->
+            <!-- Optional small note
             <div class="project-text" style="font-size:0.78rem; margin-top:8px;">
-              <!-- Optional short note to hiring managers -->
-              Designed for review by hiring managers and recruiters – happy to walk through this project in an interview.
-            </div>
+              Built as part of the Lloyds Banking Group Data Science & Analytics virtual experience
+              on Forage. The repository is still evolving as I iterate on features and model tuning.
+            </div> -->
           </aside>
         </div>
       </article>

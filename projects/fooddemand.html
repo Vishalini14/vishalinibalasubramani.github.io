@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Project – [Project Title] | Vishalini Balasubramani</title>
+  <title>Project – Food Demand Forecasting | Vishalini Balasubramani</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Google Font (same as main site) -->
@@ -11,10 +11,7 @@
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
 
-  <!-- If you extracted your main styles into a separate file, use this instead of inline styles:
-  <link rel="stylesheet" href="../styles.css">
-  -->
-
+  <!-- Styles (SAME as alliance/pcos pages) -->
   <style>
     :root {
       --bg: #050816;
@@ -345,7 +342,7 @@
           <div class="brand-avatar">VB</div>
           <div class="brand-text">
             <span>Vishalini Balasubramani</span>
-            <span>Data Science · Analytics · Engineering</span>
+            <span>Data Science · Machine Learning · Analytics</span>
           </div>
         </div>
 
@@ -364,36 +361,33 @@
         <!-- HEADER -->
         <div class="project-header">
           <div class="project-tag">
-            <!-- EDIT THIS: e.g. "Machine Learning", "GenAI", "GIS" -->
+            <i class="bi bi-globe2"></i> Zero Hunger
+            <i class="bi bi-graph-up-arrow"></i> Time Series
             <i class="bi bi-cpu"></i> Machine Learning
           </div>
 
           <h1 class="project-title">
-            <!-- EDIT THIS: Project title -->
-            Customer Churn Prediction for SmartBank
+            Food Demand Forecasting for Zero Hunger Initiatives
           </h1>
 
           <p class="project-subtitle">
-            <!-- EDIT THIS: One-liner summary -->
-            Built a churn prediction model for a Lloyds subsidiary (SmartBank) using EDA, feature engineering, 
-            and supervised learning to identify at-risk customers and support targeted retention strategies.
+            Compared LSTM and ARIMA time-series models on FAOSTAT food consumption, income,
+            and population data from 50 African countries to support data-driven planning for
+            the UN Sustainable Development Goal 2 – Zero Hunger. 
           </p>
 
           <div class="meta-row">
             <div class="meta-item">
               <i class="bi bi-calendar-event"></i>
-              <!-- EDIT THIS: Timeline -->
-              2025 · Academic + Portfolio Project
+              2025 ·  Msc Data Science - Dissertation
             </div>
             <div class="meta-item">
               <i class="bi bi-briefcase"></i>
-              <!-- EDIT THIS: Context -->
-              Domain: Banking · Customer Analytics
+              Domain: Time Series Forecasting · Food Security
             </div>
             <div class="meta-item">
-              <i class="bi bi-graph-up-arrow"></i>
-              <!-- EDIT THIS: Outcome highlight -->
-              Outcome: Improved identification of high-risk churn customers
+              <i class="bi bi-award"></i>
+              Outcome: LSTM outperformed ARIMA (RMSE 0.221 vs 0.298; MAE 0.173 vs 0.246)
             </div>
           </div>
         </div>
@@ -407,29 +401,45 @@
               <div class="section-label">Overview</div>
               <h2 class="project-section-title">Project summary</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <p>
-                  This project focuses on predicting customer churn for SmartBank, a fictional Lloyds subsidiary,
-                  using historical customer behaviour, demographics, and product usage data. The goal was to give
-                  the business an early warning system to identify customers likely to leave, enabling proactive
-                  retention actions.
+                  This dissertation investigates how modern time-series models can improve food
+                  demand forecasting to reduce food waste and hunger. Focusing on Africa, I used
+                  multivariate data – historical per-capita food consumption, Gross National Income
+                  (GNI), and population – from FAOSTAT (2019–2022) for 50 countries to build and
+                  compare LSTM and ARIMA forecasting models.
+                </p>
+                <p>
+                  The goal was not only to forecast future demand more accurately, but to understand
+                  how macro-level indicators influence consumption and how these insights can help
+                  governments and organisations allocate food more efficiently in support of SDG 2.
                 </p>
               </div>
             </div>
 
-            <!-- Problem -->
+            <!-- Problem & objectives -->
             <div style="margin-bottom: 16px;">
               <div class="section-label">Problem</div>
-              <h2 class="project-section-title">Business problem & objectives</h2>
+              <h2 class="project-section-title">Research aim & objectives</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <p>
-                  Banks lose significant revenue when high-value customers close their accounts. SmartBank wanted to:
-                </p>
+                  Traditional food demand forecasts often ignore socioeconomic drivers such as income
+                  and population, making it harder to match production with real needs and avoid waste.
+                  This project set out to:
                 <ul>
-                  <li>Identify customers most likely to churn in the near future.</li>
-                  <li>Understand which factors drive churn behaviour (e.g., complaints, low activity, fees).</li>
-                  <li>Prioritise retention campaigns for high-risk and high-value segments.</li>
+                  <li>
+                    Accurately forecast regional food demand for Africa using time-series models.
+                  </li>
+                  <li>
+                    Integrate macro-level indicators (income, population) with historical consumption.
+                  </li>
+                  <li>
+                    Compare machine-learning-based LSTM with statistical ARIMA on predictive
+                    performance.
+                  </li>
+                  <li>
+                    Provide actionable insights for policymakers and organisations working on
+                    Zero Hunger initiatives.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -437,15 +447,46 @@
             <!-- Approach -->
             <div style="margin-bottom: 16px;">
               <div class="section-label">Approach</div>
-              <h2 class="project-section-title">Data, modelling & workflow</h2>
+              <h2 class="project-section-title">Data, methodology & modelling</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <ul>
-                  <li>Performed exploratory data analysis (EDA) to understand distributions, correlations, and data quality.</li>
-                  <li>Engineered features from transaction history, tenure, complaints, and product holdings.</li>
-                  <li>Handled class imbalance using techniques like class weighting / resampling.</li>
-                  <li>Trained baseline models (Logistic Regression) and compared with tree-based methods.</li>
-                  <li>Evaluated models using AUC, precision/recall, and business-friendly metrics.</li>
+                  <li>
+                    <strong>Data collection:</strong> Retrieved secondary data from FAOSTAT’s
+                    “Suite for Food Security Indicators”, “Macro-Economic Indicators” and
+                    “Population and Employment” for 2019–2022, covering 50 African countries and
+                    producing 200 country–year observations. 
+                  </li>
+                  <li>
+                    <strong>EDA & correlation analysis:</strong> Conducted exploratory data analysis,
+                    plotted consumption distributions and scatterplots (e.g., consumption vs GNI),
+                    and computed a correlation matrix. Consumption showed a weak positive correlation
+                    with GNI (~0.27) and almost no correlation with population (~–0.0007). 
+                  </li>
+                  <li>
+                    <strong>Preprocessing:</strong> Cleaned and merged FAOSTAT datasets into a single
+                    time-series-ready dataframe, handled missing values, and normalised features using
+                    MinMaxScaler to stabilise training. 
+                  </li>
+                  <li>
+                    <strong>LSTM model:</strong> Built a univariate/multivariate LSTM in TensorFlow/Keras
+                    with 50 units, ReLU activation, dropout 0.2, Adam optimizer and MSE loss. Trained
+                    for 30 epochs with batch size 32 using an 80/20 train–test split. 
+                  </li>
+                  <li>
+                    <strong>ARIMA model:</strong> Tested stationarity using the Augmented Dickey–Fuller
+                    test, then iterated ARIMA(p,d,q) configurations using ACF/PACF plots, selecting
+                    ARIMA(4,1,0) based on significance and AIC/BIC values.
+                  </li>
+                  <li>
+                    <strong>Regression analysis:</strong> Fitted an OLS regression of consumption on GNI
+                    to quantify the direct income–demand relationship (coefficient 0.2903, R² = 0.074),
+                    confirming that income matters but does not fully explain consumption patterns. 
+                  </li>
+                  <li>
+                    <strong>Evaluation:</strong> Compared models using MAE and RMSE on the test set and
+                    visually inspected actual vs predicted series plots to assess how well each model
+                    tracked turning points. \
+                  </li>
                 </ul>
               </div>
             </div>
@@ -455,11 +496,34 @@
               <div class="section-label">Results</div>
               <h2 class="project-section-title">Key insights & outcomes</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <ul>
-                  <li>Model successfully differentiated churners from non-churners with strong AUC and recall on high-risk customers.</li>
-                  <li>Top drivers of churn included reduced account activity, increased complaints, and low product engagement.</li>
-                  <li>Suggested a prioritisation strategy: focus retention offers on high-risk, high-LTV customers first.</li>
+                  <li>
+                    <strong>LSTM vs ARIMA:</strong> LSTM clearly outperformed ARIMA with
+                    <strong>RMSE 0.221 vs 0.298</strong> and <strong>MAE 0.173 vs 0.246</strong>,
+                    validating the hypothesis that a nonlinear ML model is better suited to this
+                    multivariate food demand problem. 
+                  </li>
+                  <li>
+                    <strong>Nonlinear relationships:</strong> The LSTM model captured complex shifts in
+                    consumption that ARIMA missed, especially where changes in income and population
+                    interacted with existing consumption trends. 
+                  </li>
+                  <li>
+                    <strong>Income effects:</strong> OLS regression showed a statistically significant but
+                    modest positive relationship between GNI and consumption (p &lt; 0.001, R² = 0.074),
+                    indicating that other factors (culture, geography, self-production, aid) also play a
+                    major role. 
+                  </li>
+                  <li>
+                    <strong>Policy relevance:</strong> Forecasts generated by the LSTM model can help
+                    anticipate future demand patterns and inform food distribution and stock planning,
+                    reducing overproduction in some regions and shortages in others. 
+                  </li>
+                  <li>
+                    <strong>Data limitations:</strong> The limited time window (2019–2022) and incomplete
+                    coverage for some African countries highlight the need for richer, more granular data
+                    ecosystems to further improve model performance and impact. 
+                  </li>
                 </ul>
               </div>
             </div>
@@ -469,11 +533,16 @@
               <div class="section-label">Reflection</div>
               <h2 class="project-section-title">What I learned</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <p>
-                  This project strengthened my end-to-end workflow skills: from cleaning and exploring real-world style 
-                  banking data, to feature engineering, model evaluation, and framing results in a way that is useful 
-                  for business stakeholders rather than just technically interesting.
+                  This project strengthened skills in time-series forecasting: from
+                  sourcing and cleaning macro-level data, to EDA, building LSTM and ARIMA models,
+                  tuning them, and evaluating them with appropriate metrics.
+                </p>
+                <p>
+                  More importantly, it taught me how to connect technical model outputs to real-world
+                  sustainability goals. Translating RMSE and MAE improvements into concrete guidance
+                  for Zero Hunger initiatives helped me practice on ways to communicate with non-technical
+                  stakeholders – a skill I want to keep applying in future data-for-policy roles. 
                 </p>
               </div>
             </div>
@@ -485,50 +554,21 @@
             <div class="stack-card">
               <div class="stack-title">Tech stack & methods</div>
               <div class="stack-tags">
-                <!-- EDIT THESE TAGS PER PROJECT -->
                 <span class="stack-tag">Python</span>
-                <span class="stack-tag">Pandas</span>
-                <span class="stack-tag">NumPy</span>
-                <span class="stack-tag">Scikit-learn</span>
                 <span class="stack-tag">Seaborn</span>
-                <span class="stack-tag">Matplotlib</span>
-                <span class="stack-tag">Logistic Regression</span>
-                <span class="stack-tag">EDA</span>
-                <span class="stack-tag">Classification</span>
+                <span class="stack-tag">Scikit-learn</span>
+                <span class="stack-tag">TensorFlow / Keras</span>
+                <span class="stack-tag">Statsmodels</span>
+                <span class="stack-tag">LSTM</span>
+                <span class="stack-tag">ARIMA</span>
+                <span class="stack-tag">OLS Regression</span>
+                <span class="stack-tag">Time Series</span>
               </div>
             </div>
 
-            <!-- Links -->
-            <div class="links-card">
-              <div class="links-title">Links & resources</div>
-              <ul class="links-list">
-                <!-- EDIT OR REMOVE LINKS AS NEEDED -->
-                <li>
-                  <i class="bi bi-github"></i>
-                  <a href="#" target="_blank" rel="noopener">
-                    View project on GitHub
-                  </a>
-                </li>
-                <li>
-                  <i class="bi bi-bar-chart-line"></i>
-                  <a href="#" target="_blank" rel="noopener">
-                    View notebook / report
-                  </a>
-                </li>
-                <li>
-                  <i class="bi bi-link-45deg"></i>
-                  <a href="../index.html#projects">
-                    Back to portfolio
-                  </a>
-                </li>
-              </ul>
-            </div>
+            
 
-            <!-- Optional small note -->
-            <div class="project-text" style="font-size:0.78rem; margin-top:8px;">
-              <!-- Optional short note to hiring managers -->
-              Designed for review by hiring managers and recruiters – happy to walk through this project in an interview.
-            </div>
+            
           </aside>
         </div>
       </article>

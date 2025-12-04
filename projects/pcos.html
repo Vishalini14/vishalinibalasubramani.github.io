@@ -2,18 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Project – [Project Title] | Vishalini Balasubramani</title>
+  <title>Project – PCOS Prediction | Vishalini Balasubramani</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google Font (same as main site) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
 
-  <!-- If you extracted your main styles into a separate file, use this instead of inline styles:
-  <link rel="stylesheet" href="../styles.css">
-  -->
+  <!-- Reuse same styles from alliance.html -->
+  <!-- Styles -->
 
   <style>
     :root {
@@ -334,220 +330,266 @@
     }
   </style>
 </head>
+
 <body>
 <div class="noise"></div>
 
 <main>
-  <header>
-    <div class="container">
-      <div class="top-bar">
-        <div class="brand">
-          <div class="brand-avatar">VB</div>
-          <div class="brand-text">
-            <span>Vishalini Balasubramani</span>
-            <span>Data Science · Analytics · Engineering</span>
-          </div>
+<header>
+  <div class="container">
+    <div class="top-bar">
+      <div class="brand">
+        <div class="brand-avatar">VB</div>
+        <div class="brand-text">
+          <span>Vishalini Balasubramani</span>
+          <span>Data Science · Machine Learning · Analytics</span>
         </div>
-
-        <!-- Back to main portfolio projects section -->
-        <a href="../index.html#projects" class="back-link">
-          <i class="bi bi-arrow-left"></i>
-          Back to projects
-        </a>
       </div>
+
+      <a href="../index.html#projects" class="back-link">
+        <i class="bi bi-arrow-left"></i>
+        Back to projects
+      </a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section class="project-wrapper">
-    <div class="container">
-      <article class="project-card">
-        <!-- HEADER -->
-        <div class="project-header">
-          <div class="project-tag">
-            <!-- EDIT THIS: e.g. "Machine Learning", "GenAI", "GIS" -->
-            <i class="bi bi-cpu"></i> Machine Learning
-          </div>
+<section class="project-wrapper">
+<div class="container">
+<article class="project-card">
 
-          <h1 class="project-title">
-            <!-- EDIT THIS: Project title -->
-            Customer Churn Prediction for SmartBank
-          </h1>
+<!-- HEADER -->
+<div class="project-header">
+  <div class="project-tag">
+    <i class="bi bi-heart-pulse"></i> Healthcare Analytics
+    <i class="bi bi-graph-up"></i> Machine Learning
+    <i class="bi bi-bar-chart"></i> EDA
+  </div>
 
-          <p class="project-subtitle">
-            <!-- EDIT THIS: One-liner summary -->
-            Built a churn prediction model for a Lloyds subsidiary (SmartBank) using EDA, feature engineering, 
-            and supervised learning to identify at-risk customers and support targeted retention strategies.
-          </p>
+  <h1 class="project-title">PCOS Prediction</h1>
 
-          <div class="meta-row">
-            <div class="meta-item">
-              <i class="bi bi-calendar-event"></i>
-              <!-- EDIT THIS: Timeline -->
-              2025 · Academic + Portfolio Project
-            </div>
-            <div class="meta-item">
-              <i class="bi bi-briefcase"></i>
-              <!-- EDIT THIS: Context -->
-              Domain: Banking · Customer Analytics
-            </div>
-            <div class="meta-item">
-              <i class="bi bi-graph-up-arrow"></i>
-              <!-- EDIT THIS: Outcome highlight -->
-              Outcome: Improved identification of high-risk churn customers
-            </div>
-          </div>
-        </div>
+  <p class="project-subtitle">
+    Data science project using clinical and lifestyle data from 541 participants to 
+    analyse symptoms, hormone correlations and lifestyle impacts in PCOS, culminating in a 
+    supervised machine-learning prediction system achieving 94.45% accuracy.
+  </p>
 
-        <!-- BODY -->
-        <div class="project-body">
-          <!-- LEFT: MAIN CONTENT -->
-          <div class="project-main">
-            <!-- Overview -->
-            <div style="margin-bottom: 16px;">
-              <div class="section-label">Overview</div>
-              <h2 class="project-section-title">Project summary</h2>
-              <div class="project-text">
-                <!-- EDIT THIS -->
-                <p>
-                  This project focuses on predicting customer churn for SmartBank, a fictional Lloyds subsidiary,
-                  using historical customer behaviour, demographics, and product usage data. The goal was to give
-                  the business an early warning system to identify customers likely to leave, enabling proactive
-                  retention actions.
-                </p>
-              </div>
-            </div>
-
-            <!-- Problem -->
-            <div style="margin-bottom: 16px;">
-              <div class="section-label">Problem</div>
-              <h2 class="project-section-title">Business problem & objectives</h2>
-              <div class="project-text">
-                <!-- EDIT THIS -->
-                <p>
-                  Banks lose significant revenue when high-value customers close their accounts. SmartBank wanted to:
-                </p>
-                <ul>
-                  <li>Identify customers most likely to churn in the near future.</li>
-                  <li>Understand which factors drive churn behaviour (e.g., complaints, low activity, fees).</li>
-                  <li>Prioritise retention campaigns for high-risk and high-value segments.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Approach -->
-            <div style="margin-bottom: 16px;">
-              <div class="section-label">Approach</div>
-              <h2 class="project-section-title">Data, modelling & workflow</h2>
-              <div class="project-text">
-                <!-- EDIT THIS -->
-                <ul>
-                  <li>Performed exploratory data analysis (EDA) to understand distributions, correlations, and data quality.</li>
-                  <li>Engineered features from transaction history, tenure, complaints, and product holdings.</li>
-                  <li>Handled class imbalance using techniques like class weighting / resampling.</li>
-                  <li>Trained baseline models (Logistic Regression) and compared with tree-based methods.</li>
-                  <li>Evaluated models using AUC, precision/recall, and business-friendly metrics.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Results -->
-            <div style="margin-bottom: 16px;">
-              <div class="section-label">Results</div>
-              <h2 class="project-section-title">Key insights & outcomes</h2>
-              <div class="project-text">
-                <!-- EDIT THIS -->
-                <ul>
-                  <li>Model successfully differentiated churners from non-churners with strong AUC and recall on high-risk customers.</li>
-                  <li>Top drivers of churn included reduced account activity, increased complaints, and low product engagement.</li>
-                  <li>Suggested a prioritisation strategy: focus retention offers on high-risk, high-LTV customers first.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Reflection -->
-            <div>
-              <div class="section-label">Reflection</div>
-              <h2 class="project-section-title">What I learned</h2>
-              <div class="project-text">
-                <!-- EDIT THIS -->
-                <p>
-                  This project strengthened my end-to-end workflow skills: from cleaning and exploring real-world style 
-                  banking data, to feature engineering, model evaluation, and framing results in a way that is useful 
-                  for business stakeholders rather than just technically interesting.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- RIGHT: SIDE PANEL -->
-          <aside class="project-side">
-            <!-- Tech stack -->
-            <div class="stack-card">
-              <div class="stack-title">Tech stack & methods</div>
-              <div class="stack-tags">
-                <!-- EDIT THESE TAGS PER PROJECT -->
-                <span class="stack-tag">Python</span>
-                <span class="stack-tag">Pandas</span>
-                <span class="stack-tag">NumPy</span>
-                <span class="stack-tag">Scikit-learn</span>
-                <span class="stack-tag">Seaborn</span>
-                <span class="stack-tag">Matplotlib</span>
-                <span class="stack-tag">Logistic Regression</span>
-                <span class="stack-tag">EDA</span>
-                <span class="stack-tag">Classification</span>
-              </div>
-            </div>
-
-            <!-- Links -->
-            <div class="links-card">
-              <div class="links-title">Links & resources</div>
-              <ul class="links-list">
-                <!-- EDIT OR REMOVE LINKS AS NEEDED -->
-                <li>
-                  <i class="bi bi-github"></i>
-                  <a href="#" target="_blank" rel="noopener">
-                    View project on GitHub
-                  </a>
-                </li>
-                <li>
-                  <i class="bi bi-bar-chart-line"></i>
-                  <a href="#" target="_blank" rel="noopener">
-                    View notebook / report
-                  </a>
-                </li>
-                <li>
-                  <i class="bi bi-link-45deg"></i>
-                  <a href="../index.html#projects">
-                    Back to portfolio
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Optional small note -->
-            <div class="project-text" style="font-size:0.78rem; margin-top:8px;">
-              <!-- Optional short note to hiring managers -->
-              Designed for review by hiring managers and recruiters – happy to walk through this project in an interview.
-            </div>
-          </aside>
-        </div>
-      </article>
+  <div class="meta-row">
+    <div class="meta-item">
+      <i class="bi bi-calendar-event"></i>
+      2024 ·  Programming for Data Analysis 
     </div>
-  </section>
+    <div class="meta-item">
+      <i class="bi bi-briefcase"></i>
+      Domain: Healthcare · Medical Data Analytics · Kaggle Dataset
+    </div>
+    <div class="meta-item">
+      <i class="bi bi-award"></i>
+      Outcome: Random Forest model – 94.45% accuracy
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="project-body">
+
+<!-- MAIN CONTENT -->
+<div class="project-main">
+
+<!-- OVERVIEW -->
+<div>
+  <div class="section-label">Overview</div>
+  <h2 class="project-section-title">Project summary</h2>
+  <div class="project-text">
+    <p>
+      This project analysed a kaggle dataset - PCOS clinical dataset comprising <strong>541 patient records 
+      and 45 medical, physiological and lifestyle features</strong> to explore 
+      symptom prevalence, hormone relationships, and long-term metabolic risk associated with 
+      Polycystic Ovary Syndrome.
+    </p>
+    <p>
+      The work combined <strong>statistical EDA</strong>, correlation analysis, 
+      <strong>feature engineering</strong>, and multiple classification models to 
+      predict PCOS diagnosis (Y/N), followed by cluster analysis to identify distinct 
+      disorder subtypes for potential future clinical interpretation.
+    </p>
+  </div>
+</div>
+
+<!-- BUSINESS QUESTIONS -->
+<div>
+  <div class="section-label">Objectives</div>
+  <h2 class="project-section-title">Analytical questions</h2>
+  <div class="project-text">
+    <ul>
+      <li>
+        How do dietary habits and exercise influence hormone levels and follicle counts in PCOS?
+      </li>
+      <li>
+        Does early age of onset lead to elevated metabolic risk (e.g., insulin resistance, diabetes)?
+      </li>
+      <li>
+        How does BMI relate to severity of symptoms such as hair growth, weight gain, 
+        pimples, skin darkening, hair loss and menstrual irregularities?
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- APPROACH -->
+<div>
+  <div class="section-label">Approach</div>
+  <h2 class="project-section-title">Data preparation & modelling workflow</h2>
+  <div class="project-text">
+    <ul>
+      <li>
+        <strong>EDA:</strong> Class imbalance analysis 
+        (67% negative vs 33% PCOS positive cases), 
+        lifestyle visualisations (food habits vs exercise), and 
+        symptom distribution assessments.
+      </li>
+      <li>
+        <strong>Data cleaning:</strong> Converted mixed data to numeric,
+        computed missing BMI from height & weight, imputed remaining null values,
+        removed low-value variables and capped numeric outliers using the IQR method.
+      </li>
+      <li>
+        <strong>Feature standardisation:</strong> 
+        Z-score normalisation across 31+ clinical predictors.
+      </li>
+      <li>
+        <strong>Models trained:</strong>
+        Logistic Regression, Random Forest, SVM, KNN, and Decision Tree classifiers.
+      </li>
+      <li>
+        <strong>Evaluation:</strong>
+        Accuracy comparison across models to identify best performing predictor.
+      </li>
+      <li>
+        <strong>Advanced analysis/Hyperparameter tuning:</strong>
+        K-means clustering (K=3) to identify PCOS sub-phenotype groupings using age vs hormone levels.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div>
+  <div class="section-label">Results</div>
+  <h2 class="project-section-title">Key findings & outcomes</h2>
+  <div class="project-text">
+    <ul>
+      <li>
+        <strong>Best ML model:</strong>
+        Random Forest achieved <strong>94.45% classification accuracy</strong>, 
+        outperforming SVM, Logistic Regression, KNN and Decision Tree.
+      </li>
+      <li>
+        <strong>Strong correlations:</strong>
+        High correlation between follicle counts (L vs R ovaries ≈ 0.80) and 
+        moderate LH–FSH hormone correlation (≈ 0.43).
+      </li>
+      <li>
+        <strong>Symptom associations:</strong>
+        Skin darkening exhibited strong correlation with PCOS (≈ 0.47). 
+        BMI and weight highly correlated (≈ 0.90), reinforcing obesity as an aggravating factor.
+      </li>
+      <li>
+        <strong>Lifestyle impact:</strong>
+        Fast-food consumption linked to higher follicle counts; 
+        exercise alone was not sufficient without dietary improvement.
+      </li>
+      <li>
+        <strong>Age patterns:</strong>
+        Highest PCOS onset observed in reproductive ages <strong>25–34</strong>, 
+        with insulin resistance indicated by abnormal random blood sugar levels.
+      </li>
+      <li>
+        <strong>Clustering:</strong>
+        K-means revealed three clinical subgroups with varying FSH hormone profiles, 
+        potentially supporting personalised treatment segmentation.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- REFLECTION -->
+<div>
+  <div class="section-label">Reflection</div>
+  <h2 class="project-section-title">What I learned</h2>
+  <div class="project-text">
+    <p>
+      This project strengthened my ability to handle real-world, imperfect healthcare data — 
+      from missing values and heavy class imbalance to noisy biological variables requiring 
+      careful outlier handling and interpretation.
+    </p>
+    <p>
+      I developed hands-on experience with the full data-science lifecycle:
+      EDA → preprocessing → ML modelling → evaluation → interpretation → clustering.
+      Just as importantly, the project improved my skills in translating statistics and 
+      machine-learning results into clinically meaningful insights rather than stopping at 
+      raw model metrics.
+    </p>
+  </div>
+</div>
+
+</div>
+
+<!-- SIDE PANEL -->
+<aside class="project-side">
+
+<div class="stack-card">
+  <div class="stack-title">Tech stack & methods</div>
+  <div class="stack-tags">
+    <span class="stack-tag">Python</span>
+    <span class="stack-tag">EDA</span>
+    <span class="stack-tag">Data Analysis</span>
+    <span class="stack-tag">Scikit-learn</span>
+    <span class="stack-tag">Matplotlib</span>
+    <span class="stack-tag">Seaborn</span>
+    <span class="stack-tag">Random Forest</span>
+    <span class="stack-tag">SVM</span>
+    <span class="stack-tag">Logistic Regression</span>
+    <span class="stack-tag">K-Means Clustering</span>
+  </div>
+</div>
+
+<div class="links-card">
+  <div class="links-title">Project links</div>
+  <ul class="links-list">
+    <li>
+      <i class="bi bi-github"></i>
+      <a href="https://github.com/Vishalini14/predicting-pcos-ml" target="_blank">
+        GitHub Repository
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- 
+<div class="project-text" style="font-size:0.78rem;">
+  Developed as part of CIS7031 – Programming for Data Analysis (MSc Data Science).
+  Full notebook and report available via GitHub.
+</div> -->
+
+</aside>
+
+</div>
+</article>
+</div>
+</section>
 </main>
 
 <footer>
-  <div class="container">
-    <div class="footer-inner">
-      <span>© <span id="year"></span> Vishalini Balasubramani</span>
-      <span>Project detail · Portfolio</span>
-    </div>
+<div class="container">
+  <div class="footer-inner">
+    <span>© <span id="year"></span> Vishalini Balasubramani</span>
+    <span>Project detail · Portfolio</span>
   </div>
+</div>
 </footer>
 
 <script>
-  // Dynamic year
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>

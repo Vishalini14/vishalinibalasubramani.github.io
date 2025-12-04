@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Project – [Project Title] | Vishalini Balasubramani</title>
+  <title>Project – UMG Sentiment Analysis & YouTube Engagement | Vishalini Balasubramani</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Google Font (same as main site) -->
@@ -11,10 +11,7 @@
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
 
-  <!-- If you extracted your main styles into a separate file, use this instead of inline styles:
-  <link rel="stylesheet" href="../styles.css">
-  -->
-
+  <!-- Styles -->
   <style>
     :root {
       --bg: #050816;
@@ -345,7 +342,7 @@
           <div class="brand-avatar">VB</div>
           <div class="brand-text">
             <span>Vishalini Balasubramani</span>
-            <span>Data Science · Analytics · Engineering</span>
+            <span>Social Media · NLP · Analytics</span>
           </div>
         </div>
 
@@ -364,36 +361,33 @@
         <!-- HEADER -->
         <div class="project-header">
           <div class="project-tag">
-            <!-- EDIT THIS: e.g. "Machine Learning", "GenAI", "GIS" -->
-            <i class="bi bi-cpu"></i> Machine Learning
+            <i class="bi bi-hash"></i> Social Media Analytics
+            <i class="bi bi-emoji-smile"></i> Sentiment Analysis
+            <i class="bi bi-youtube"></i> YouTube Engagement
           </div>
 
           <h1 class="project-title">
-            <!-- EDIT THIS: Project title -->
-            Customer Churn Prediction for SmartBank
+            UMG YouTube Engagement & TikTok Policy Change Sentiment Analysis
           </h1>
 
           <p class="project-subtitle">
-            <!-- EDIT THIS: One-liner summary -->
-            Built a churn prediction model for a Lloyds subsidiary (SmartBank) using EDA, feature engineering, 
-            and supervised learning to identify at-risk customers and support targeted retention strategies.
+            Analysed Universal Music Group’s YouTube engagement metrics and public sentiment
+            on X (Twitter) around its TikTok contract dispute, using TextBlob and VADER-based
+            sentiment analysis plus Tableau dashboards for storytelling.
           </p>
 
           <div class="meta-row">
             <div class="meta-item">
               <i class="bi bi-calendar-event"></i>
-              <!-- EDIT THIS: Timeline -->
-              2025 · Academic + Portfolio Project
+              2024 · Social Media Analytics for Business
             </div>
             <div class="meta-item">
               <i class="bi bi-briefcase"></i>
-              <!-- EDIT THIS: Context -->
-              Domain: Banking · Customer Analytics
+              Domain: Music Industry · Social Media Insights
             </div>
             <div class="meta-item">
-              <i class="bi bi-graph-up-arrow"></i>
-              <!-- EDIT THIS: Outcome highlight -->
-              Outcome: Improved identification of high-risk churn customers
+              <i class="bi bi-activity"></i>
+              Outcome: 321 tweets analysed · UMG YT channel underperforms vs artists
             </div>
           </div>
         </div>
@@ -407,45 +401,85 @@
               <div class="section-label">Overview</div>
               <h2 class="project-section-title">Project summary</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <p>
-                  This project focuses on predicting customer churn for SmartBank, a fictional Lloyds subsidiary,
-                  using historical customer behaviour, demographics, and product usage data. The goal was to give
-                  the business an early warning system to identify customers likely to leave, enabling proactive
-                  retention actions.
+                  This project explores how social media analytics can support business decisions
+                  for Universal Music Group (UMG). I combined <strong>Twitter sentiment analysis</strong>
+                  about UMG’s contract clash with TikTok with an analysis of
+                  <strong>YouTube engagement metrics</strong> for UMG, its artists and its subsidiary Republic
+                  Records. 
+                </p>
+                <p>
+                  The work blends NLP, sentiment lexicons and dashboarding: tweets scraped via
+                  Apify from January–April 2024 were cleaned and scored using both TextBlob and
+                  VADER; YouTube metrics were collected using the YouTube Data API and visualised
+                  in Tableau to uncover performance patterns across channels.                 
                 </p>
               </div>
             </div>
 
-            <!-- Problem -->
+            <!-- Objectives -->
             <div style="margin-bottom: 16px;">
-              <div class="section-label">Problem</div>
-              <h2 class="project-section-title">Business problem & objectives</h2>
+              <div class="section-label">Objectives</div>
+              <h2 class="project-section-title">Business questions & goals</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <p>
-                  Banks lose significant revenue when high-value customers close their accounts. SmartBank wanted to:
+                  The analysis focused on two core questions:
                 </p>
                 <ul>
-                  <li>Identify customers most likely to churn in the near future.</li>
-                  <li>Understand which factors drive churn behaviour (e.g., complaints, low activity, fees).</li>
-                  <li>Prioritise retention campaigns for high-risk and high-value segments.</li>
+                  <li>
+                    <strong>Sentiment:</strong> How does the public perceive UMG’s policy change and
+                    dispute with TikTok, and how does that sentiment evolve over time?
+                  </li>
+                  <li>
+                    <strong>Engagement:</strong> How does UMG’s own YouTube channel perform compared
+                    to its superstar artists and Republic Records, and what publishing patterns drive
+                    engagement?
+                  </li>
                 </ul>
+                <p>
+                  The goal was to turn raw social data into <strong>practical recommendations</strong> on content,
+                  partnerships and platform strategy for UMG’s marketing and leadership teams. 
               </div>
             </div>
 
             <!-- Approach -->
             <div style="margin-bottom: 16px;">
               <div class="section-label">Approach</div>
-              <h2 class="project-section-title">Data, modelling & workflow</h2>
+              <h2 class="project-section-title">Data collection, cleaning & sentiment methods</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <ul>
-                  <li>Performed exploratory data analysis (EDA) to understand distributions, correlations, and data quality.</li>
-                  <li>Engineered features from transaction history, tenure, complaints, and product holdings.</li>
-                  <li>Handled class imbalance using techniques like class weighting / resampling.</li>
-                  <li>Trained baseline models (Logistic Regression) and compared with tree-based methods.</li>
-                  <li>Evaluated models using AUC, precision/recall, and business-friendly metrics.</li>
+                  <li>
+                    <strong>Data sources:</strong> Used the YouTube Data API to gather channel and video
+                    statistics for UMG, Taylor Swift, Rihanna, Ariana Grande, Billie Eilish, Nicki Minaj
+                    and Republic Records, stored in <code>UMG_artist_YT.csv</code> and
+                    <code>UMG_YT.csv</code>. 
+                  </li>
+                  <li>
+                    <strong>Tweet scraping:</strong> Used Apify’s “Tweet Scraper V2” actor to collect
+                    tweets mentioning “TikTok AND UMG” between January and April 2024, producing
+                    month-wise CSV files.
+                  </li>
+                  <li>
+                    <strong>Cleaning & preprocessing:</strong> Applied the <code>emoji</code> library to convert emojis
+                    (e.g. 👍 → <code>:thumbs_up:</code>), used <code>re</code> to strip usernames, hashtags, links and
+                    punctuation, tokenised with NLTK, removed English stopwords and lemmatised tokens
+                    to prepare text for sentiment scoring. 
+                  </li>
+                  <li>
+                    <strong>Sentiment analysis:</strong> 
+                    <ul>
+                      <li><strong>TextBlob:</strong> polarity and subjectivity to label tweets as positive,
+                        negative or neutral based on polarity (&gt;0, &lt;0, =0). </li>
+                      <li><strong>VADER:</strong> lexicon-based scores (<code>neg</code>, <code>neu</code>, <code>pos</code>, <code>compound</code>)
+                        to categorise sentiment; chosen for its suitability to informal social media text. </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Visualisation & dashboards:</strong> Used Python (Matplotlib, Seaborn, WordCloud)
+                    and Tableau to build dashboards for:
+                    <em>UMG vs TikTok Twitter sentiment</em> and
+                    <em>Universal Music Group: YouTube Engagement</em>. 
+                  </li>
                 </ul>
               </div>
             </div>
@@ -455,11 +489,40 @@
               <div class="section-label">Results</div>
               <h2 class="project-section-title">Key insights & outcomes</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <ul>
-                  <li>Model successfully differentiated churners from non-churners with strong AUC and recall on high-risk customers.</li>
-                  <li>Top drivers of churn included reduced account activity, increased complaints, and low product engagement.</li>
-                  <li>Suggested a prioritisation strategy: focus retention offers on high-risk, high-LTV customers first.</li>
+                  <li>
+                    <strong>Tweet volume & period:</strong> 321 tweets were collected between
+                    1 January and 23 April 2024, with a clear spike in conversation and views in
+                    February following the public escalation of the dispute. 
+                  </li>
+                  <li>
+                    <strong>Sentiment distribution:</strong> VADER showed ~44% positive, 38% negative and
+                    18% neutral tweets, suggesting that while many users criticised impacts of song
+                    removals, a slightly larger portion supported UMG’s stance on artist rights. 
+                  </li>
+                  <li>
+                    <strong>Model comparison:</strong> VADER outperformed TextBlob by capturing informal tweet context 
+                     more accurately (44% positive, 38% negative, 18% neutral). 
+                  </li>
+                  <li>
+                    <strong>Temporal sentiment:</strong> Month-wise sentiment charts showed negative tweets
+                    decreasing and positive sentiment slightly increasing across January–April, indicating
+                    some stabilisation of perception over time. 
+                  </li>
+                  <li>
+                    <strong>Word clouds:</strong> Sentiment-specific word clouds emphasised terms like
+                    “TikTok”, “muted”, “artist”, “UMG”, “failed” and “song”, capturing the core narrative
+                    around content removal and artist support.
+                  <li>
+                    <strong>YouTube engagement patterns:</strong> UMG’s own channel underperforms relative
+                    to artists like Taylor Swift and Ariana Grande in total views; Tuesdays and October
+                    are dominant upload times, and top-performing videos often feature high-profile
+                    artists or viral-friendly topics. 
+                  <li>
+                    <strong>Business story:</strong> The analysis shows UMG must balance protecting IP and
+                    artist rights with maintaining a positive public image and strong platform presence,
+                    especially on TikTok, YouTube Shorts and Reels. 
+                  </li>
                 </ul>
               </div>
             </div>
@@ -469,11 +532,16 @@
               <div class="section-label">Reflection</div>
               <h2 class="project-section-title">What I learned</h2>
               <div class="project-text">
-                <!-- EDIT THIS -->
                 <p>
-                  This project strengthened my end-to-end workflow skills: from cleaning and exploring real-world style 
-                  banking data, to feature engineering, model evaluation, and framing results in a way that is useful 
-                  for business stakeholders rather than just technically interesting.
+                  This project deepened my practical skills in social media analytics:
+                  from ethically scraping data and cleaning noisy tweets with emojis and slang, to applying
+                  multiple sentiment tools, validating them, and presenting findings in interactive dashboards. 
+                <p>
+                  It also highlighted the limitations of platform data and sentiment tools - demographic
+                  biases, API restrictions and disagreements between TextBlob and VADER - and the
+                  need to communicate these caveats clearly when advising decision-makers. Finally,
+                  turning charts into <strong>concrete recommendations</strong> for UMG’s YouTube and TikTok
+                  strategy sharpened my ability to bridge technical analysis with marketing and strategy.
                 </p>
               </div>
             </div>
@@ -485,50 +553,46 @@
             <div class="stack-card">
               <div class="stack-title">Tech stack & methods</div>
               <div class="stack-tags">
-                <!-- EDIT THESE TAGS PER PROJECT -->
                 <span class="stack-tag">Python</span>
                 <span class="stack-tag">Pandas</span>
-                <span class="stack-tag">NumPy</span>
-                <span class="stack-tag">Scikit-learn</span>
-                <span class="stack-tag">Seaborn</span>
                 <span class="stack-tag">Matplotlib</span>
-                <span class="stack-tag">Logistic Regression</span>
-                <span class="stack-tag">EDA</span>
-                <span class="stack-tag">Classification</span>
+                <span class="stack-tag">Seaborn</span>
+                <span class="stack-tag">TextBlob</span>
+                <span class="stack-tag">VADER</span>
+                <span class="stack-tag">NLTK</span>
+                <span class="stack-tag">emoji</span>
+                <span class="stack-tag">Regex (re)</span>
+                <span class="stack-tag">WordCloud</span>
+                <span class="stack-tag">Tableau</span>
+                <span class="stack-tag">YouTube Data API</span>
+                <span class="stack-tag">Apify Tweet Scraper</span>
               </div>
             </div>
 
             <!-- Links -->
             <div class="links-card">
-              <div class="links-title">Links & resources</div>
-              <ul class="links-list">
-                <!-- EDIT OR REMOVE LINKS AS NEEDED -->
-                <li>
-                  <i class="bi bi-github"></i>
-                  <a href="#" target="_blank" rel="noopener">
-                    View project on GitHub
-                  </a>
-                </li>
-                <li>
-                  <i class="bi bi-bar-chart-line"></i>
-                  <a href="#" target="_blank" rel="noopener">
-                    View notebook / report
-                  </a>
-                </li>
-                <li>
-                  <i class="bi bi-link-45deg"></i>
-                  <a href="../index.html#projects">
-                    Back to portfolio
-                  </a>
-                </li>
-              </ul>
+             <div class="links-title">Live dashboards (Tableau)</div>
+             <ul class="links-list">
+
+              <li>
+                <i class="bi bi-bar-chart-line"></i>
+                <a href="https://public.tableau.com/views/UniversalMusicGroup_YouTubeEngagement/UniversalMusicGroupYouTubeEngagement?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                  target="_blank">
+                  UMG YouTube Engagement Dashboard
+                </a>
+              </li>
+
+              <li>
+                <i class="bi bi-chat-dots"></i>
+                <a href="https://public.tableau.com/views/UMGvsTikTok-Twittersentimentanalysis/UMGVSTIKTOK-TWITTERSENTIMENTANALYSIS?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                  target="_blank">
+                  UMG vs TikTok – Twitter Sentiment Dashboard
+                </a>
+              </li>
+
+             </ul>
             </div>
 
-            <!-- Optional small note -->
-            <div class="project-text" style="font-size:0.78rem; margin-top:8px;">
-              <!-- Optional short note to hiring managers -->
-              Designed for review by hiring managers and recruiters – happy to walk through this project in an interview.
-            </div>
           </aside>
         </div>
       </article>
@@ -552,3 +616,8 @@
 
 </body>
 </html>
+
+
+
+
+
